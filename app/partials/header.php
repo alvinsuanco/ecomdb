@@ -18,7 +18,7 @@
 				</li>
 
 				<li class="nav-item">
-					<a class="nav-link" href="#"> Cart <span class="badge bg-light text-dark" id="cart-count"> 
+					<a class="nav-link" href="../views/cart.php"> Cart <span class="badge bg-light text-dark" id="cart-count"> 
 						<?php 
 							if (isset($_SESSION['cart'])) {
 								echo array_sum($_SESSION['cart']);

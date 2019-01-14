@@ -17,6 +17,6 @@
 	}
 	// var_dump($_SESSION['user']);
 
-	echo "login_success";
+	// echo "login_success";
 	mysqli_close($conn);
 

@@ -70,7 +70,7 @@ $(document).ready( () => {
 		} else {
 			return true;
 		}
-	}
+	} //end of validate_registration_form
 
 
 	$("#add_user").click( (e) => {
@@ -147,30 +147,81 @@ $(document).ready( () => {
 			"method" : "POST",
 			"data" : {
 				'item_id':item_id,
-				'item_quantity':item_quantity
+				'item_quantity':item_quantity,
+				'update_from_cart_page' : 0
 			},
 			"success" : (data) => {
 				$("#cart-count").html(data);
 			}
-		});
-
+		});	
 
 	});
 
 
+	function getTotal() {
+			let total = 0;
+			$(".item_subtotal").each(function(e) {
+				total += parseFloat($(this).html());
+			});
+			$("#total_price").html(total.toFixed(2));
+		}
 
 
+		//edit cart
+		$(".item_quantity>input").on("input", (e) =>{
+			let item_id = $(e.target).attr('data-id');
+			let quantity = parseInt($(e.target).val());
+			let price = parseFloat($(e.target).parents('tr').find(".item_price").html());
+
+			subTotal = quantity * price;
+			$(e.target).parents('tr').find('.item_subtotal').html(subTotal.toFixed(2));
+
+			getTotal();
+
+			$.ajax({
+				"method" : "POST",
+				"url" : "../controllers/update_cart.php",
+				"data" : {
+					'item_id': item_id,
+					'item_quantity': quantity,
+					'update_from_cart_page': 1
+				},
+				"success": (data) => {
+					// alert(data);
+					$("#cart-count").html(data);
+				}
+			});
+		});
 
 
+		//delete button
+		$(document).on("click", '.item-remove', (e) =>{
+			e.preventDefault();
+			e.stopPropagation();
 
+			let item_id = $(e.target).attr('data-id');
 
+			$.ajax({
+				"method" : "POST",
+				"url" : "../controllers/update_cart.php",
+				"data" : {
+					'item_id' : item_id,
+					'item_quantity' : 0
+				},
+				"beforeSend" : () => {
+					return confirm("Are you sure you want to delete?");
+				},
+				"success": (data) => {;
+					$(e.target).parents('tr').remove();
+					$("#cart-count").html(data);
+					getTotal();
+					window.location.replace("../views/cart.php");
+				}
 
+			});
+		});
 
-
-
-
-
-
+	
 
 
 
