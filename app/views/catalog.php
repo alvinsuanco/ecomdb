@@ -69,7 +69,7 @@
 						echo "<div class='row'>";
 
 						foreach ($items as $item) { ?>
-							<div class="col-sm-3">
+							<div class="col-sm-3 mt-4">
 								<div class="card h-100">
 									<img class="card-img-top" src="<?php echo $item['image_path']; ?>">
 									<div class="card-body">

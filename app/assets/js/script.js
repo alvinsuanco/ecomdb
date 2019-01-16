@@ -221,6 +221,12 @@ $(document).ready( () => {
 			});
 		});
 
+
+		//submit profile from update
+		$('#update_info').click( ()=>{
+			//alert('submitted');
+			$('#update_user_details').submit();
+		})
 	
 
 

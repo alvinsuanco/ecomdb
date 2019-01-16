@@ -12,7 +12,7 @@
 
 	<h1 class="text-center mt-4"> Hello! Welcome to your checkout page </h1>
 
-	<form method="POST" action="./controllers/placeorder.php">
+	<form method="POST" action="../controllers/placeorder.php">
 		<div class="container mt-4">
 			<div class="row">
 				<div class="col-8">
