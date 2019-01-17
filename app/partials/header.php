@@ -9,7 +9,12 @@
 
 		<div id="navbar-nav" class="collapse navbar-collapse">
 			<ul class="navbar-nav ml-auto">
+
+				<?php if (!isset($_SESSION['user']) || (isset($_SESSION['user'])) && ($_SESSION['user']['roles_id'] == 2)) { ?>
+				
+
 				<li class="nav-item">
+
 					<a class="nav-link" href="./home.php"> Home </a>
 				</li>
 
@@ -29,7 +34,19 @@
 					 </span> </a>
 				</li>
 
+			<?php } elseif(isset($_SESSION['user']) && ($_SESSION['user']['roles_id'] == 1)) { ?>
+
+				<li class="nav-item">
+					<a class="nav-link" href="../views/items.php"> Items </a>
+				</li>
+
+			<?php }; ?>
+
 				<?php if(isset($_SESSION['user'])) { ?>
+
+				<li class="nav-item">
+					<a class="nav-link" href="./vieqws/profile.php"> WELCOME!, <?php echo $_SESSION['user']['firstname']; ?></a>
+				</li>
 
 				<li class="nav-item">
 					<a class="nav-link" href="../controllers/logout.php"> Logout </a>

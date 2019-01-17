@@ -3,7 +3,9 @@
 	require_once './connect.php';
 
 	$username = $_POST['username'];
+	var_export($username);
 	$password = $_POST['password'];
+	var_export($username);
 
 	$sql = "SELECT * FROM users WHERE username ='$username' ";
 	$result = mysqli_query($conn, $sql);

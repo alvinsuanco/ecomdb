@@ -4,6 +4,8 @@
 
 
 <?php function get_page_content(){
+
+
 	global $conn;
  ?>
 <?php $user = $_SESSION['user']; ?>
