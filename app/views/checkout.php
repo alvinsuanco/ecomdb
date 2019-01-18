@@ -22,6 +22,22 @@
 						<input type="text" class="form-control" name="addressLine1" value="<?php echo $_SESSION['user']['address']; ?>">
 					</div>
 				</div> <!-- end of col -->
+				<div class="col-sm-4">
+					<h4> Payment Methods </h4>
+					<select name="payment_mode" id="payment_mode" class="form-control">
+						<?php
+						$payment_mode_query = "SELECT * FROM payment_mode";
+						$payment_modes = mysqli_query($conn, $payment_mode_query);
+						foreach ($payment_modes as $payment_mode) {
+							extract($payment_mode);
+							echo "<option value='$id'>$name</option>";
+						}
+
+
+						?>
+
+					</select>
+				</div>
 			</div> <!-- end of row -->
 
 			<h4> Order Summary </h4>
@@ -50,10 +66,12 @@
 					?>
 					
 				</div> <!-- end of col -->
+
+
 			</div> <!-- end of row -->
 
 			<hr>
-			<button type="submit" class="btn btn-primary btn-block"> Place Order Now</button>
+			<button type="submit" class="btn btn-primary btn-block" target="_blank"> Place Order Now</button>
 
 			<div class="row car-items mt-4">
 				<table class="table table-striped table-bordered" id="cart-items">

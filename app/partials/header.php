@@ -39,6 +39,12 @@
 				<li class="nav-item">
 					<a class="nav-link" href="../views/items.php"> Items </a>
 				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../views/order.php"> Orders </a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../views/users.php"> Users </a>
+				</li>
 
 			<?php }; ?>
 
