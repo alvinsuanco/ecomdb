@@ -168,8 +168,8 @@
 
 	    $redirectUrls = new RedirectUrls();
 	    $redirectUrls
-	        ->setReturnUrl('http://192.168.10.40/batch19/qstore/app/controllers/pay.php?success=true')
-	        ->setCancelUrl('http://192.168.10.40/batch19/qstore/app/controllers/pay.php?success=false');
+	        ->setReturnUrl('http://ecomdb.herokuapp.com/app/controllers/pay.php?success=true')
+	        ->setCancelUrl('http://ecomdb.herokuapp.com/app/controllers/pay.php?success=false');
 
 	    $payment = new Payment();
 	    $payment->setIntent('sale')

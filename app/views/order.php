@@ -21,7 +21,7 @@
 							$order_query = "SELECT o.id, o.transaction_code, o.status_id, s.name AS status FROM orders o JOIN statuses s ON (o.status_id = s.id);";
 							$orders = mysqli_query($conn, $order_query);
 							foreach($orders as $order){
-								// var_dump($order);
+							//var_dump($order);
 						 ?>
 						 <tr>
 						 	<td><?php echo $order['transaction_code']; ?></td>

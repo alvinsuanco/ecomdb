@@ -228,13 +228,7 @@ $(document).ready( () => {
 			$('#update_user_details').submit();
 		})
 	
-		//order cancelled button
-		// $(document).on('click', '.cancelled-btn', (e) =>{
-		// 	e.preventDefault();
-		// 	e.stopPropagation();
-
-			
-		// })
+	
 
 
 });
