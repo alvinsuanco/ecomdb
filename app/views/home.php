@@ -9,10 +9,10 @@
 
 		<div class="container-fluid">
 
-			<div class="jumbotron bg-dark text-center text-white">
-				<h1>Qner Store</h1>
+			<div class="jumbotron bg-secondary text-center text-white mt-5">
+				<h1> Mang-inasar </h1>
 
-				<p>Your Favorite Qner Store</p>
+				<p> Online Restaurant </p>
 
 			</div> <!-- end of jambo -->
 
