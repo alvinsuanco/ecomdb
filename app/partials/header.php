@@ -23,7 +23,7 @@
 				</li>
 
 				<li class="nav-item">
-					<a class="nav-link" href="../views/cart.php"><img src="https://img.icons8.com/color/48/000000/add-shopping-cart.png"> Cart <span class="badge bg-light text-dark" id="cart-count"> 
+					<a class="nav-link" href="../views/cart.php"><img src="https://img.icons8.com/color/48/000000/add-shopping-cart.png"> Cart <span class="badge bg-light text-dark animated bounce " id="cart-count "> 
 						<?php 
 							if (isset($_SESSION['cart'])) {
 								echo array_sum($_SESSION['cart']);
@@ -37,13 +37,13 @@
 			<?php } elseif(isset($_SESSION['user']) && ($_SESSION['user']['roles_id'] == 1)) { ?>
 
 				<li class="nav-item">
-					<a class="nav-link" href="../views/items.php"> Items </a>
+					<a class="nav-link" href="../views/items.php"><img src="https://img.icons8.com/color/48/000000/new-product.png"> Items </a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="../views/order.php"> Orders </a>
+					<a class="nav-link" href="../views/order.php"><img src="https://img.icons8.com/color/48/000000/todo-list.png"> Orders </a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="../views/users.php"> Users </a>
+					<a class="nav-link" href="../views/users.php"><img src="https://img.icons8.com/color/48/000000/add-user-group-man-man.png"> Users </a>
 				</li>
 
 			<?php }; ?>
@@ -51,11 +51,11 @@
 				<?php if(isset($_SESSION['user'])) { ?>
 
 				<li class="nav-item">
-					<a class="nav-link" href="./vieqws/profile.php"> WELCOME!, <?php echo $_SESSION['user']['firstname']; ?></a>
+					<a class="nav-link" href="../views/profile.php"><img src="https://img.icons8.com/color/48/000000/handshake.png"> WELCOME, <?php echo $_SESSION['user']['firstname']; ?></a>
 				</li>
 
 				<li class="nav-item">
-					<a class="nav-link" href="../controllers/logout.php"> Logout </a>
+					<a class="nav-link" href="../controllers/logout.php"><img src="https://img.icons8.com/color/48/000000/exit.png"> Logout </a>
 				</li>
 
 			<?php } else { ?>

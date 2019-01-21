@@ -6,7 +6,7 @@
 ?>
 
 	<div class="container mt-5">
-		<h4 class="text-center"> User Admin Page</h4>
+		<h4 class="text-center m-3"> User Admin Page</h4>
 		<div class="row">
 			<div class="col-sm-10 offset-sm-2">
 				<table class="table table-responsive table-striped">

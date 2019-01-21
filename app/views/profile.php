@@ -12,7 +12,7 @@
 	
 
 
-	<div class="container">
+	<div class="container mt-2">
 		<div class="row">
 			<div class="col-lg-3">
 				<div class="list-group" id="list-tab" role="tablist">
@@ -27,7 +27,7 @@
 			<div class="col-lg-7">
 				<div class="tab-content">
 					<div class="tab-pane" id="profile" role="tabpanel">
-						<h3>User Information</h3>
+						<h3 class="text-center">User Information</h3>
 						<form id="update_user_details" action="../controllers/update_profile.php" method="POST">
 							<div class="container">
 								<input type="text" class="form-control" name="user_id" value="<?php echo $user['id']; ?>" hidden>
@@ -53,8 +53,8 @@
 					</div>
 					<div class="tab-pane" id="history" role="tabpanel">
 						<div class="row">
-							<div class="col-md-6">
-								<h3>Order History</h3>
+							<div class="col-md-7">
+								<h3 class="text-center">Order History</h3>
 							</div>
 						</div>
 						<div class="table-responsive">
@@ -62,7 +62,7 @@
 								<thead>
 									<tr class="text-center">
 										<th>Transaction Number</th>
-										<th>Purchase Date</th>+
+										<th>Purchase Date</th>
 										<th>Status</th>
 										<th>Payment Mode</th>
 									</tr>

@@ -6,14 +6,14 @@
 	?>
 
 	<div class="container">
-		<h4>Orders Admin Page</h4>
+		<h4 class="text-center m-3">Orders Admin Page</h4>
 		<div class="row">
 			<div class="col-sm-8 offset-sm-2">
 				<table class="table table-striped">
 					<thead>
-						<th>Transaction Code</th>
-						<th>Status</th>
-						<th>Actions</th>
+						<th class="text-center">Transaction Code</th>
+						<th class="text-center">Status</th>
+						<th class="text-center">Actions</th>
 					</thead>
 
 					<tbody>
